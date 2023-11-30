@@ -1,6 +1,6 @@
 name: "Dynu Reverse Proxy"
 init: false
-version: "0.2"
+version: "0.3"
 url: "https://github.com/SalvatoreITA/hassio_repository/tree/main/dynu_reverse_proxy"
 slug: "dynu_reverse"
 description: "Reverse Proxy"
