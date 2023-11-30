@@ -55,7 +55,7 @@ fi
 
 if ! grep -q "noipy" /etc/crontabs/root
  then
-   echo "*/5 * * * * /usr/bin/noipy -u ${TOKEN} -n ${DOMAIN} --provider duck 2>&1 >> /dev/null" >> /etc/crontabs/root
+   echo "*/5 * * * * /usr/bin/noipy -u ${TOKEN} -n ${DOMAIN} --provider generic 2>&1 >> /dev/null" >> /etc/crontabs/root
 fi
 # Start Cron
 bashio::log.info "Start Cron"
@@ -64,7 +64,7 @@ API_PID+=($!)
 
 # Check IP
 bashio::log.info "Check IP Provider"
-/usr/bin/noipy -u ${TOKEN} -n ${DOMAIN} --provider duck
+/usr/bin/noipy -u ${TOKEN} -n ${DOMAIN} --provider generic
 
 function stop_api() {
     bashio::log.info "Kill Processes..."
