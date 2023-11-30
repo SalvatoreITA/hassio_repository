@@ -14,7 +14,7 @@ check_ssl () {
    if [ -z "${CERTS}" ]
    then
      bashio::log.info "no certificate found try to generate it..."
-     certbot --nginx --email admin@localhost.it --domain ${DOMAIN} -n --agree-tos --config-dir /ssl/dynu/ > /dev/null
+     certbot --nginx --email admin@localhost.it --domain ${DOMAIN} -n --agree-tos --config-dir /ssl/generic/ > /dev/null
      if [ $? != 0 ]
       then
 	bashio::log.error "ERROR can't validate new certificate"
