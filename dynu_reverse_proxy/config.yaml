@@ -1,0 +1,28 @@
+name: "Dynu Reverse Proxy"
+init: false
+version: "0.1"
+url: "https://github.com/SalvatoreITA/hassio_repository/tree/main/dynu_reverse_proxy"
+slug: "dynu_reverse"
+description: "Reverse Proxy"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: "services"
+boot: "auto"
+map:
+  - config:rw
+  - ssl:rw
+options:
+  token: "Dynu token"
+  domain: "Dominio example.giize.com"
+  haip: "Indirizzo Locale HA (192.168.1.x)"
+schema:
+  token: "str"
+  domain: "str"
+  haip: "str"
+ports:
+  80/tcp: 80
+  8122/tcp: 8122
